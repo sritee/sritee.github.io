@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Projects</title>
+        <!-- link to main stylesheet -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/main_1.css">
+    </head>
+    <body>
+
+        <nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<!-- <li><a href="/about">About</a></li> -->
+        		<li><a href="/assets/Resume.pdf">R‌&#233;sum‌&#233;</a></li>
+        		<li><a href="/projects.html">Experience</a></li>
+    		</ul>
+		</nav>
+
+        <h4> Research </h4>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+              <td width="25%">
+                <div class="one">
+                <!-- <div class="two"><img src='friendly_after.png'></div> -->
+                <img src='/assets/Research/depth_map_low.png' style="width:240px;height:140px;">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                  <p>CalibNet: Self-Supervised Extrinsic Calibration using 3D Spatial Transformer Networks<br></p>
+                  Ganesh Iyer, <a href="http://karnikram.info">Karnik Ram</a>, <a href="http://krrish94.github.io/">Krishna Murthy</a>, <a href="http://robotics.iiit.ac.in/">K. Madhava Krishna</a><br>
+                <i>Robotics Research Center, IIIT-H</i><p2>   [Accepted to IROS 2018]</p2><br><br>
+                <anchor id="p_swaayatt_stereo" href=''></anchor>
+                <p2>CalibNet is a self-supervised deep network capable of automatically estimating the 6-DoF rigid body transformation for extrinsic calibration between a 3D LiDAR and a 2D camera in real-time, by maximizing the photometric and geometric consistency between the input images and point clouds. <a href="https://epiception.github.io/CalibNet/">[Project Page]</a> <a href="https://arxiv.org/abs/1803.08181">[Paper]</a> <br></p2>
+              </td>
+          </tr>
+          <tr>
+            <td width="25%">
+              <div class="one">
+              <!-- <div class="two"><img src='friendly_after.png'></div> -->
+              <img src='/assets/Research/ctc.png' style="width:240px;height:150px;">
+              </div>
+            </td>
+            <td valign="top" width="75%">
+                <p>Geometric Consistency for Self-Supervised End-to-End Visual Odometry<br></p>
+                Ganesh Iyer*, <a href="http://krrish94.github.io/">Krishna Murthy*</a>, <a href="https://gunshi.github.io/">Gunshi Gupta</a>, <a href="http://robotics.iiit.ac.in/">K. Madhava Krishna, </a><br> Liam Paull
+                <anchor id="p_research_calib" href=''></anchor>
+              <br>
+              <i>Robotics Research Center, IIIT-H and Montreal Institute for Learning Algorithms, Université de Montréal</i><p2>   [Accepted to CVPR-Workshop 2018]</p2><br><br>
+              <p2>We propose an unsupervised paradigm for deep visual odometry learning. We show that using a noisy teacher, which could be a standard VO pipeline, and by designing a loss term that enforces geometric consistency of the trajectory, we can train accurate deep models for VO that do not require ground-truth labels. We leverage geometry as a self-supervisory signal and propose "Composite Transformation Constraints (CTCs)", that automatically generate supervisory signals for training and enforce geometric consistency in the VO estimate
+              <a href="https://krrish94.github.io/CTCNet-release/">[Project Page]</a> <a href="http://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w9/Iyer_Geometric_Consistency_for_CVPR_2018_paper.pdf">[Paper]</a> </p2>
+            </td>
+          </tr>
+      </table>
+      <h4> Projects </h4>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tr>
+          <td width="25%">
+            <div class="one">
+            <!-- <div class="two"><img src='friendly_after.png'></div> -->
+            <img src='/assets/Projects/montage_horz_low.png' style="width:240px;height:160px;">
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <anchor id="p_swaayatt_facepose" href=''></anchor>
+            <p>Stereo Pipeline: Deep Convolutional Network, Semi-Global Matching and Pointcloud Reconstruction<br></p>
+            <i>Swaayatt Robots, India</i><br>
+            <!-- <a href="https://sampa.cs.washington.edu/projects/vr-hw.html">project page</a> -->
+            <p2>Implementation and Improvement of pipeline in <a href = "http://jmlr.csail.mit.edu/papers/volume17/15-535/15-535.pdf">Zbontar et. al.</a> for fast Disparity Map Computation. Point Cloud Reconstruction of output Depth Map.<br>
+            Open Source Code: <a href="https://github.com/epiception/theano-mc-cnn">[Deep Network]</a> | <a href="https://github.com/epiception/SGM-Census">[Census Transform and Semi-Global Matching]</a><br></p2>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%">
+            <div class="one">
+            <img src='/assets/Projects/face_clouds_low.png' style="width:240px;height:140px;">
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <anchor id="p_swaayatt_tracker" href=''></anchor>
+            <p>RGBD Facial Pose tracking for Advanced Driver Assistance Systems<br></p>
+            <i>Swaayatt Robots, India</i><br>
+            <p2>Point Cloud Processing package for tracking the face pose and central axis of gaze for RGBD based Advanced Driver
+                Assistance System. Alignment to standard model using 3D FPFH features for points and normals, Sampling Consensus and Iterative Closest Point.</p2>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25%">
+            <div class="one">
+            <img src='/assets/Projects/tracker_segmenter.jpg' style="width:240px;height:140px;">
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <anchor id="p_embedded1" href=''></anchor>
+            <p>Tracking and Segmentation of Vehicles for Annotation<br></p>
+            <i>Swaayatt Robots, India</i><br>
+            <p2>Annotation system for vehicle detection data. Propogating selected keypoints and feature points within vehicle boundaries using multi-scale template matching and particle filters. Results in a scale-changing contour of vehicles to be segmented. </p2>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%">
+            <div class="one">
+                <iframe width="240" height="180" src="https://www.youtube.com/embed/YWjOEWO5lFs" frameborder="0" gesture="media" allowfullscreen></iframe>
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <anchor id="p_embedded2" href=''></anchor>
+            <p>Telepresence Robot with Stereoscopic Vision<br></p>
+            <i>Final Year Project, TCET, Mumbai University</i><br>
+            <p2>Small scale and inexpensive telepresence platform capable of streaming immersive 3D SBS live video feed (350x350 resolution, 40 fps). Base platform actuated using AtMega2560 and keyboard/console commands. Raspberry Pi with camera module receives axis-angle commands from smartphone to control a 2-DOF servo-gimbal.<br>
+            Code: <a href="https://github.com/epiception/Virtual-Telepresence">[Telepresence bot]</a><br></p2>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%">
+            <div class="one">
+                <iframe width="240" height="120" src="https://www.youtube.com/embed/yTIguJIK16Y" frameborder="0" gesture="media" allowfullscreen></iframe><br>
+                <iframe width="240" height="120" src="https://www.youtube.com/embed/YmRXB2YnW48" frameborder="0" gesture="media" allowfullscreen></iframe>
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <p>Grid Traversing Robots<br></p>
+            <i>eYantra Lab Setup Initiative, TCET, Mumbai University</i><br>
+            <p2>1. Minesweeping Robot: Traverses a small grid to locate basic obstacles (mines) and display their co-ordinate locations after reaching the end point. Breadth First Search and Djikstras' Algorithms based traversal are demonstrated.<br><br>
+            2. Warehouse Management Simulation: Implementation of a small scale automated supply chain using order picking algorithms. Objects are collected, sorted based on a requirement (eg. color) and then transported to the specified destination zone.<br><br>
+            Developed on the Firebird-V AtMega2560 Robotics Research Platform, Nex Robotics, IIT-Bombay.
+            Code: <a href="https://github.com/epiception/Mine-Localization-Robot-using-Firebird-V">[Mine Localization]</a> | <a href="https://github.com/epiception/Warehouse-Management-Using-FireBird-V">[Warehouse Management]</a><br></p2>
+          </td>
+        </tr>
+      </table>
+
+      <footer>
+          <a style="float: right; padding-top: 25px;" href="https://jonbarron.info/">Template Credits</a>
+          <!-- <ul>
+              <li><a href="mailto:giyer2309@gmail.com">email</a></li>
+              <li><a href="https://github.com/epiception">github.com/epiception</a></li>
+          </ul> -->
+          <div class="footer-social-icons">
+              <!-- <h4 class="_14">Follow us on</h4> -->
+              <ul class="social-icons">
+                  <li><a href="mailto:giyer2309@gmail.com" class="social-icon"> <i class="fa fa-envelope"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/ganesh-iyer-0607bb112/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://github.com/epiception" class="social-icon"> <i class="fa fa-github"></i></a></li>
+                  <li><a href="https://www.youtube.com/user/giyer2309/videos?view_as=subscriber&sort=dd&view=0&shelf_id=0" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+              </ul>
+          </div>
+      </footer>
+    </body>
+
+</html>
