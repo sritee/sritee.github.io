@@ -21,26 +21,26 @@
     		</ul>
 		</nav>
 	<div dir="ltr" style="text-align: left;" trbidi="on">
-Hey guys,
+Hey guys <br>
 
-Today we're gonna be looking at some Stochastic policy gradient methods. All experiments use the Fourier basis of order 3 to represent the state variable. Jan Peters'&nbsp;<span style="color: blue;"><a href="http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/IROS2006-Peters_%5b0%5d.pdf" target="_blank"><span style="color: blue;">Policy Gradient Methods in Robotics</span></a>&nbsp;</span>is a great review paper!
+Today we're gonna be looking at some Stochastic policy gradient methods. All experiments use the Fourier basis of order 3 to represent the state variable. Jan Peters'&nbsp;<span style="color: blue;"><a href="http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/IROS2006-Peters_%5b0%5d.pdf" target="_blank"><span style="color: blue;">Policy Gradient Methods in Robotics</span></a>&nbsp;</span>is a great review paper!<br>
 
-The focus of this post is on these 3 methods:
+The focus of this post is on these 3 methods: <br>
 
-1) Monte Carlo Policy Gradient,
-2) Policy Gradient by Numerical Gradient Estimate
-3) Actor Critic Methods.
+1) Monte Carlo Policy Gradient,<br>
+2) Policy Gradient by Numerical Gradient Estimate<br>
+3) Actor Critic Methods.<br>
 <b>
 </b><b>*<a href="https://github.com/sritee/Stochastic-Policy-Gradient-Methods" target="_blank"><span style="color: blue;">Policy Gradient Methods&nbsp;Python Code</span></a>*</b>
 
 <u>
-</u> <u>Why represent the policy directly?</u>
+</u> <u>Why represent the policy directly?<br></u>
 
-Sometimes the policy is more easily representable compared to the value function. Also it allows us to include continuous actions in a principled manner. For example in the cartpole, representing the Cartpole optimal action using a logistic sigmoid or softmax maybe easier than trying to find the optimal value function.
+Sometimes the policy is more easily representable compared to the value function. Also it allows us to include continuous actions in a principled manner. For example in the cartpole, representing the Cartpole optimal action using a logistic sigmoid or softmax maybe easier than trying to find the optimal value function. <br>
 
-<u>Policy Gradient by Numerical Gradient Estimate:</u>
+<u>Policy Gradient by Numerical Gradient Estimate:</u> <br>
 
-Take a look at this <span style="color: blue;"><a href="https://www.cs.utexas.edu/users/pstone/Papers/bib2html-links/icra04.pdf" target="_blank"><span style="color: blue;">paper</span></a> </span>by UT Austin. They used Numerical gradient Estimation to improve the gait of a robot. This is often the case when we use the numerical methods to estimate the gradient.
+Take a look at this <span style="color: blue;"><a href="https://www.cs.utexas.edu/users/pstone/Papers/bib2html-links/icra04.pdf" target="_blank"><span style="color: blue;">paper</span></a> </span>by UT Austin. They used Numerical gradient Estimation to improve the gait of a robot. This is often the case when we use the numerical methods to estimate the gradient. <br>
 
 Sometimes as the paper mentions, we may not know the true functional form of the policy. In this case we are free to just use the change in reward obtained of the open loop policy and estimate the gradient numerically, since the functional form will be required if we try and find the gradient using analytical methods.
 
