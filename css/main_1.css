@@ -1,27 +1,28 @@
 /* <style> */
+/* <style> */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* </style>  */
 
 /*body {
   font-family: "Lato", sans-serif;
-  color: #fff;
-  background: #ededed;
+  color: #000000;
+  background: #fcfcfc;
   -webkit-font-smoothing: antialiased;
   margin: 20px auto; width: 70%;
 }*/
 
 body {
   font-family: "Lato", sans-serif;
-  color: #fff;
-  background: #ededed;
+  color: #000000;
+  background: #fcfcfc;
   -webkit-font-smoothing: antialiased;
   margin: 10px auto; width: 70%;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 
 /* a.right
@@ -45,11 +46,11 @@ anchor{
     color: transparent; 
 }
 
-/*p, ul { font-size: 1.5em; line-height: 1.4em; color: #fff; }*/
-p { font-size: 1.25em; line-height: 1.2em; color: #fff; font-weight: 200; text-align: justify;}
-p2{ font-size: 1.0em; line-height: 0.9em; color: #fff; font-weight: 200; text-align: justify; margin-right: 20px}
-p3{ font-size: 1.25em; line-height: 1.2em; color: #fff; font-weight: 200; text-align: justify;color:#DDDDDD}
-ul { font-size: 1.5em; line-height: 1.4em; color: #fff;}
+/*p, ul { font-size: 1.5em; line-height: 1.4em; color: #000000; }*/
+p { font-size: 1.25em; line-height: 1.2em; color: #000000; font-weight: 200; text-align: justify;}
+p2{ font-size: 1.0em; line-height: 0.9em; color: #000000; font-weight: 200; text-align: justify; margin-right: 20px}
+p3{ font-size: 1.25em; line-height: 1.2em; color: #000000; font-weight: 200; text-align: justify;color:#DDDDDD}
+ul { font-size: 1.5em; line-height: 1.4em; color: #000000;}
 
 h1, h2, h3, h4 { font-family: 'Lato', 'Sans-Serif';
                 font-weight:300; }
@@ -69,7 +70,7 @@ h5{ font-family: 'Lato', 'Sans-Serif';font-weight:300; font-size: 3em; text-alig
 h6{ font-family: 'Roboto Condensed', 'Lato', 'Sans-Serif';font-weight:300; font-size: 1.5em; text-align: left; margin-top: 0.8em; margin-bottom: 0.8em; color: #FF851B}
 
 newstable li{
-  font-family: "Lato"; font-size: 1.25em; line-height: 1.2em; color: #fff; font-weight: 200; text-align: justify;  -webkit-font-smoothing: antialiased;
+  font-family: "Lato"; font-size: 1.25em; line-height: 1.2em; color: #000000; font-weight: 200; text-align: justify;  -webkit-font-smoothing: antialiased;
 }
 
 /*nav ul{ font-size: 1.5em; font-family: 'Lato', 'Arial', 'Sans-Serif'; padding: 20px; list-style: none; text-align: center;}*/
@@ -126,7 +127,7 @@ ul {
   /*margin: 0 auto;*/
 }
 .social-icon {
-  color: #fff;
+  color: #000000;
 }
 ul.social-icons {
   margin-top: 10px;
@@ -137,7 +138,7 @@ ul.social-icons {
   height: 100px;
 }
 .social-icons a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -165,7 +166,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-facebook:hover {
   background-color: #3d5b99;
@@ -177,7 +178,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-twitter:hover {
   background-color: #00aced;
@@ -189,7 +190,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-rss:hover {
   background-color: #eb8231;
@@ -201,7 +202,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-youtube:hover {
   background-color: #e64a41;
@@ -213,7 +214,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-linkedin:hover {
   background-color: #0073a4;
@@ -225,7 +226,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-google-plus:hover {
   background-color: #e25714;
@@ -237,7 +238,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-envelope:hover {
   background-color: #e25714;
@@ -249,7 +250,7 @@ img {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ededed;
+  background-color: #fcfcfc;
 }
 .fa-github:hover {
   background-color: #01FF70 ;
