@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Stochastic Policy Gradient Methods</title>
+        <!-- link to main stylesheet -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/main_1.css">
+    </head>
+    <body>
+
+        <nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<!-- <li><a href="/about">About</a></li> -->
+			<li><a href="/RLblog.html">RL Blog </a></li>
+			<li><a href="/MLblog.html">ML Blog </a></li>
+			<li><a href="/projects.html">Projects</a></li>
+        		<li><a href="/assets/Resume.pdf">CV</a></li>
+        		
+    		</ul>
+		</nav>
+	<div dir="ltr" style="text-align: left;" trbidi="on">
+Hey guys,
+
+Today we're gonna be looking at some Stochastic policy gradient methods. All experiments use the Fourier basis of order 3 to represent the state variable. Jan Peters'&nbsp;<span style="color: blue;"><a href="http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/IROS2006-Peters_%5b0%5d.pdf" target="_blank"><span style="color: blue;">Policy Gradient Methods in Robotics</span></a>&nbsp;</span>is a great review paper!
+
+The focus of this post is on these 3 methods:
+
+1) Monte Carlo Policy Gradient,
+2) Policy Gradient by Numerical Gradient Estimate
+3) Actor Critic Methods.
+<b>
+</b><b>*<a href="https://github.com/sritee/Stochastic-Policy-Gradient-Methods" target="_blank"><span style="color: blue;">Policy Gradient Methods&nbsp;Python Code</span></a>*</b>
+
+<u>
+</u> <u>Why represent the policy directly?</u>
+
+Sometimes the policy is more easily representable compared to the value function. Also it allows us to include continuous actions in a principled manner. For example in the cartpole, representing the Cartpole optimal action using a logistic sigmoid or softmax maybe easier than trying to find the optimal value function.
+
+<u>Policy Gradient by Numerical Gradient Estimate:</u>
+
+Take a look at this <span style="color: blue;"><a href="https://www.cs.utexas.edu/users/pstone/Papers/bib2html-links/icra04.pdf" target="_blank"><span style="color: blue;">paper</span></a> </span>by UT Austin. They used Numerical gradient Estimation to improve the gait of a robot. This is often the case when we use the numerical methods to estimate the gradient.
+
+Sometimes as the paper mentions, we may not know the true functional form of the policy. In this case we are free to just use the change in reward obtained of the open loop policy and estimate the gradient numerically, since the functional form will be required if we try and find the gradient using analytical methods.
+
+This method is good at improving a reasonably good base policy, but poor at learning from scratch!Nevertheless, it performs satisfactorily &nbsp;on a simple task such as Pole balancing task.
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-A7qVS1N_JyE/WDRrfGGJOvI/AAAAAAAAErM/4vKvEeynNkEJpxm1y6o8C8S6mmy4Jp76ACLcB/s1600/Ndiff1.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="218" src="https://1.bp.blogspot.com/-A7qVS1N_JyE/WDRrfGGJOvI/AAAAAAAAErM/4vKvEeynNkEJpxm1y6o8C8S6mmy4Jp76ACLcB/s400/Ndiff1.jpg" width="400" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">&nbsp;Image Courtesy: KineticMaths</td></tr>
+</tbody></table>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+Above image shows how we can estimate the gradient using 2 sided estimate. In the N dimensional case, the derivative becomes the gradient.
+
+We pertrube the policy parameters by delta theta, estimate the reward. We do this many times, and then apply linear regression to estimate the gradient.
+
+Then we move the parameters small direction in the direction of the gradient.
+
+
+<u>Monte Carlo Policy Gradients</u><u style="font-weight: bold;">:</u>
+<b><u>
+</u></b> 
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="https://3.bp.blogspot.com/-2d50TZXGH9o/WDRTHp7N_fI/AAAAAAAAEq0/vesURKCKMSQ1LBgUMurk6Gek2cagP3_cACLcB/s1600/MCGP%2BNo%2Bbaseline.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="297" src="https://3.bp.blogspot.com/-2d50TZXGH9o/WDRTHp7N_fI/AAAAAAAAEq0/vesURKCKMSQ1LBgUMurk6Gek2cagP3_cACLcB/s640/MCGP%2BNo%2Bbaseline.png" width="640" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">MCPG With No Baseline, with Baseline it learns in around 200-300 Episodes</td></tr>
+</tbody></table>
+
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+
+
+The Algorithm is Monte Carlo Policy gradient with baseline as the average of the rewards obtained so far. Better baselines are described in Jan peter's linked paper.
+
+The baseline does a good job in reducing the variance, but like all Monte Carlo Methods, sample efficiency becomes a concern.
+
+<u>Actor Critic Methods</u>
+<b>
+</b> In this class of methods, we have both a policy called the actor and the critic, which is a value function.
+In this method, unlike the Monte Carlo Method where we use q(s,a) the Monte-Carlo return,
+q(s,a) is actually the value function computed by the critic.
+
+Convergence is still guaranteed by the Policy Gradient Theorem, provided we use a compatible approximator.
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="https://4.bp.blogspot.com/-K-zHf7wU6Wg/WDRTKcTrYnI/AAAAAAAAErA/J0N4HGYzlvMZYCUd76T3lzsbOaOF8hXygCEw/s1600/CartPole.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="320" src="https://4.bp.blogspot.com/-K-zHf7wU6Wg/WDRTKcTrYnI/AAAAAAAAErA/J0N4HGYzlvMZYCUd76T3lzsbOaOF8hXygCEw/s640/CartPole.png" width="640" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Actor Critic Method on the Cartpole Problem, Softmax Parametrization</td></tr>
+</tbody></table>
+
+Recently Deep RL Which uses Policy Gradient methods have becomes famous. We will talk about some of these in future posts.
+
+All in all, policy gradient methods help with continuous action spaces, as in real world robotics actions are mostly continuous, and discretization of the action space may become infeasible after a point of time.
+
+
+
+
+</div>
+
+      <footer>
+          <a style="float: right; padding-top: 25px;" href="https://jonbarron.info/">Template Credits</a>
+          
+          <div class="footer-social-icons">
+              <!-- <h4 class="_14">Follow us on</h4> -->
+              <ul class="social-icons">
+                  <li><a href="mailto:thiagars@oregonstate.edu" class="social-icon"> <i class="fa fa-envelope"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/sridhar-thiagarajan/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://github.com/sritee" class="social-icon"> <i class="fa fa-github"></i></a></li>
+              </ul>
+          </div>
+      </footer>
+    </body>
+
+
