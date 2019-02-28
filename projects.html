@@ -64,22 +64,7 @@
       </table>
 	<h4> Projects </h4>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-	  <tr>
-          <td width="25%">
-            <div class="one">
-            <img src='/assets/Projects/DoctorsWithoutBorders.jpg' style="width:240px;height:140px;">
-            </div>
-          </td>
-          <td valign="top" width="75%">
-            <anchor id="MSF" href=''></anchor>
-            <p>Planners for Ebola Camps </p>
-            Personal Robotics Lab, Oregon State University<br>
-
-            <p2> This project was in collabaration with MSF (Doctors Without Borders | Médecins Sans Frontières), for improving Ebola Camps in Africa. Ebola Camps involve limited volunteers in Hazmat suits, and they have a wide variety of prioritized tasks to perform in a limited time horizon. MSF were interested in introducing robots into the picture, and I worked on formulating this problem as a finite horizon planning problem. We formulated it as an integer programming problem, in particular, an Orienteering problem, which is closely related to the Travelling Salesman Problem (TSP). After collecting time data, we used GUROBI to solve the resulting integer programs by relaxing it to a sequence of Linear Programs.</p2><br>
-	    <a href="https://github.com/sritee/Orienteering-Problem-Ebola-Camps">[Code] </a>
- 
-          </td>
-        </tr>
+	  
       	 <tr>
           <td width="25%">
             <div class="one">
@@ -95,6 +80,22 @@
 	    <a href="https://drive.google.com/file/d/1GiyIS0ApmTjjhtGblqLxovcqKf4UGYwi/view">[Tech Report]</a> <a href="https://github.com/sritee/Diverse-Density-Estimation-for-Subgoal-Detection">[Code] </a> (implementation of one of the papers)
  
           </td>
+	<tr>
+          <td width="25%">
+            <div class="one">
+            <img src='/assets/Projects/DoctorsWithoutBorders.jpg' style="width:240px;height:140px;">
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <anchor id="MSF" href=''></anchor>
+            <p>Improving Ebola Camps using Integer Optimization Algorithms </p>
+            Personal Robotics Lab, Oregon State University<br>
+
+            <p2> This project was in collabaration with Doctors Without Borders (Médecins Sans Frontières), for improving Ebola Camps in Africa. Ebola Camps involve limited volunteers in Hazmat suits, and they have a wide variety of prioritized tasks to perform in a limited time horizon. MSF were interested in introducing robots into the picture, and I worked on formulating this problem as a finite horizon planning problem. We formulated it as an integer programming problem; in particular, an Orienteering problem, which is closely related to the Travelling Salesman Problem (TSP). After collecting time data, I used CVXPY with GUROBI backend to solve the resulting integer programs. They are solved by relaxing the IP to a sequence of Linear Programs, which is an instance of the more general Branch and Bound algorithm.</p2><br>
+	    <a href="https://github.com/sritee/Orienteering-Problem-Ebola-Camps">[Code] </a>
+ 
+          </td>
+        </tr>
         </tr>
       	 <tr>
           <td width="25%">
